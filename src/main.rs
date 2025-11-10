@@ -1,4 +1,5 @@
 mod json_data_structure;
+mod chunk_creator;
 
 use crate::json_data_structure::SimulationRun;
 use serde_json::to_string_pretty;
@@ -9,6 +10,7 @@ use std::fs::{File, OpenOptions};
 use std::io::{BufReader, Write};
 use std::path::Path;
 use std::{env, io};
+use crate::chunk_creator::generate_chunk;
 
 const TEST_PATH: &str = "./test";
 fn main() -> io::Result<()> {
@@ -63,7 +65,7 @@ fn main() -> io::Result<()> {
         let reader = BufReader::new(file);
         let simulation_run: SimulationRun =
             serde_json::from_reader(reader).expect("broken test file, isn't json!");
-
+        generate_chunk(simulation_run.pre_world);
         // TODO Do now the logic
     }
     Ok(())
