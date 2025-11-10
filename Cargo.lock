@@ -82,14 +82,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "steel_block_simulation"
-version = "0.1.0"
-dependencies = [
- "serde",
- "serde_json",
-]
-
-[[package]]
 name = "syn"
 version = "2.0.109"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -98,6 +90,30 @@ dependencies = [
  "proc-macro2",
  "quote",
  "unicode-ident",
+]
+
+[[package]]
+name = "test-suite"
+version = "0.1.0"
+dependencies = [
+ "serde",
+ "serde_json",
+ "test-suite-chunk",
+ "test-suite-json",
+]
+
+[[package]]
+name = "test-suite-chunk"
+version = "0.1.0"
+dependencies = [
+ "test-suite-json",
+]
+
+[[package]]
+name = "test-suite-json"
+version = "0.1.0"
+dependencies = [
+ "serde",
 ]
 
 [[package]]
