@@ -13,14 +13,14 @@ Currently, all tests will be stored in `./test` directory.
 
 The basic configuration will run all tests which are available
 ```bash
-cargo run --package steel_block_simulation --bin steel_block_simulation 
+cargo run --package flint-steel --bin flint-steel 
 ```
 
 ### Indexing
 would be recommended with a lot of tests, to have it available for a quicker start or if you want to only run some tests
 
 ```bash
-cargo run --package steel_block_simulation --bin steel_block_simulation -- index 
+cargo run --package flint-steel --bin flint-steel -- index 
 ```
 
 ### Scoped tests
@@ -28,22 +28,19 @@ You have also the option to run tests in a specific scope a scope is the directo
 A scope ends with `:` and will run all tests which are below that. You can nest as much scopes you want.
 
 ```bash
-cargo run --package steel_block_simulation --bin steel_block_simulation -- new: 
+cargo run --package flint-steel --bin flint-steel -- new: 
 ```
 
 To run a single test you add the full scope to it, this will a single test new:test
 
 ```bash
-cargo run --package steel_block_simulation --bin steel_block_simulation -- new:test 
+cargo run --package flint-steel --bin flint-steel -- new:test 
 ```
 
 
 ## Test files
 Currently the test files will be in json written.
 This describes the full test cases if what needs to be tested and done.
-
-## Documentation
-To have a starting point [here](./docs/Get_Started.md) will come the documentation of everything.
 
 ## Future Ideas
  - Mock Client to run tests on vanilla server and on every minecraft server
