@@ -8,4 +8,5 @@ serde.workspace = true
 serde_json.workspace = true
 flint-steel-chunk = { path = "../flint-steel-chunk" }
 flint-core.workspace = true
+dotenvy.workspace = true
 # rsjsonnet = "0.4.0" # for jsonnet support

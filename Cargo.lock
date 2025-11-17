@@ -9,9 +9,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a23eb6b1614318a8071c9b2521f36b424b2c83db5eb3a0fead4a6c0809af6e61"
 
 [[package]]
+name = "dotenvy"
+version = "0.15.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1aaf95b3e5c8f23aa320147307562d361db0ae0d51242340f558153b4eb2439b"
+
+[[package]]
 name = "flint-core"
 version = "0.1.0"
-source = "git+https://github.com/FlintTestMC/flint-core.git#ae166b5a41301a92046fe0eb3e12c21def792b8c"
 dependencies = [
  "anyhow",
  "serde",
@@ -22,6 +27,7 @@ dependencies = [
 name = "flint-steel"
 version = "0.1.0"
 dependencies = [
+ "dotenvy",
  "flint-core",
  "flint-steel-chunk",
  "serde",

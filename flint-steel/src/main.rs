@@ -1,9 +1,11 @@
 use std::env;
 use std::path::Path;
 use flint_core::index::Index;
+use dotenvy::dotenv;
 
 const TEST_PATH: &str = "./test";
 fn main() {
+    dotenv().ok();
     let args: Vec<String> = env::args().collect();
     let mut test_paths: Vec<String> = vec![];
     if args.len() > 1 {
